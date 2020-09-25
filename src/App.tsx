@@ -1,14 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+
+import GlobalStyle from './theme/global';
+import Home from './views/Home';
+import MovieDetail from './views/MovieDetail';
+import Sidebar from './components/Sidebar';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Sidebar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/movie/:movieId">
+            <MovieDetail />
+          </Route>
+        </Switch>
+    </Router>
   );
 }
 
