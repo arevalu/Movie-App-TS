@@ -1,17 +1,22 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-import GlobalStyle from './theme/global';
+import GlobalStyle from './styles/global';
 import Home from './views/Home';
 import MovieDetail from './views/MovieDetail';
 import Sidebar from './components/Sidebar';
+import Header from './components/Header';
+import theme from './styles/theme/theme';
 
 
-function App() {
+const App: React.FC = () => {
   return (
-    <Router>
-      <GlobalStyle />
-      <Sidebar />
+    <ThemeProvider theme={ theme }>
+      <Router>
+        <GlobalStyle />
+        <Header />
+        {/* <Sidebar /> */}
         <Switch>
           <Route exact path="/">
             <Home />
@@ -20,7 +25,8 @@ function App() {
             <MovieDetail />
           </Route>
         </Switch>
-    </Router>
+      </Router>
+    </ThemeProvider>
   );
 }
 
