@@ -6,7 +6,9 @@ const Header: React.FC = () => {
 
     return (
         <HeaderWrapper>
-            <h1>Movie App</h1>
+            <div className="container">
+                <h1>Movie App</h1>
+            </div>
         </HeaderWrapper>
     )
 }
