@@ -8,7 +8,7 @@ import Home from './views/Home';
 import MovieDetail from './views/MovieDetail';
 // import Sidebar from './components/Sidebar';
 import Header from './components/Header';
-import theme from './styles/theme/theme';
+import { theme } from './styles/theme/theme';
 
 import store from './redux/store'
 
