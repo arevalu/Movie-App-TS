@@ -22,7 +22,6 @@ export const themeReducer = (
                 }
             default:
                 return state;
-                break;
         } 
             
     }

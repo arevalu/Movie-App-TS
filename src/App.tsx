@@ -6,7 +6,7 @@ import { ThemeProvider } from 'styled-components';
 import GlobalStyle from './styles/global';
 import Home from './views/Home';
 import MovieDetail from './views/MovieDetail';
-import Sidebar from './components/Sidebar';
+// import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import theme from './styles/theme/theme';
 
