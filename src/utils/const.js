@@ -1,0 +1,1 @@
+export const URL_IMAGE_POSTER = "https://image.tmdb.org/t/p/original";

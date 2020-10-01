@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme/theme';
-import { mq } from '../../styles/breakpoints';
 
-const { colors, font, margin, spacing, width } = theme;
-console.log( mq )
+const { colors, font, spacing } = theme;
 
 export const HeaderWrapper = styled.header`
     background-color: ${ colors.dark };
@@ -15,13 +13,5 @@ export const HeaderWrapper = styled.header`
 
     h1 {
         font-size: ${ font.size.h1 };
-    }
-
-    ${ mq[3] } {
-        .container {
-            margin: ${ margin.mAuto };
-            max-width: ${ width.maxWidthLg }
-            width: 100%;
-        }
     }
 `
