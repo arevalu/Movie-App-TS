@@ -1,14 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
-function App() {
+import GlobalStyle from './styles/global';
+import Home from './views/Home';
+import MovieDetail from './views/MovieDetail';
+import Header from './components/Header';
+import { theme } from './styles/theme/theme';
+
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
-    </div>
+    <ThemeProvider theme={ theme }>
+      <Router>
+        <GlobalStyle />
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route exact path="/movie/:movieId">
+            <MovieDetail />
+          </Route>
+        </Switch>
+      </Router>
+    </ThemeProvider>
   );
 }
 
