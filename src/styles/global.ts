@@ -35,7 +35,7 @@ export default createGlobalStyle`
   ${ mq[3] } {
     .container {
         margin: ${ margin.mAuto };
-        max-width: ${ width.maxWidthLg }
+        max-width: ${ width.maxWidthLg };
         width: 100%;
     }
   }
