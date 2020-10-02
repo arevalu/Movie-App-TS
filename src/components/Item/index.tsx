@@ -1,20 +1,28 @@
 import React from 'react';
 
 import { URL_IMAGE_POSTER } from '../../utils/const';
-
+import { popularMovie } from '../../types/movies';
+ 
 import { Card, CardMedia, CardTitle, VoteAverage } from './styled';
 
-const MovieItem: React.FC = () => {
+type ItemProps = {
+    movie: popularMovie;
+}
+
+const MovieItem: React.FC<ItemProps> = ({ movie }) => {
+
+    const { poster_path, title, vote_average } = movie;
+
     return (
         <Card>
             <VoteAverage>
-                <span>7.6</span>
+                <span>{ vote_average }</span>
             </VoteAverage>
             <CardMedia 
-                imgSource={ `${ URL_IMAGE_POSTER }/rzRwTcFvttcN1ZpX2xv4j3tSdJu.jpg` }
+                imgSource={ `${ URL_IMAGE_POSTER }${ poster_path }` }
             />
             <CardTitle>
-                <p>Thor: Ragnarok</p>
+                <p>{ title }</p>
             </CardTitle>
         </Card>
     )

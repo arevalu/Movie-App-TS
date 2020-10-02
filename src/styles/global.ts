@@ -23,6 +23,15 @@ export default createGlobalStyle`
     margin-top: 2.5rem;
   }
 
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+
+    ${ mq[3] } {
+      text-align: left;
+    }
+  }
+
   ${ mq[3] } {
     .container {
         margin: ${ margin.mAuto };

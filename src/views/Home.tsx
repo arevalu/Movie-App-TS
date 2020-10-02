@@ -1,13 +1,13 @@
 import React from 'react';
 
-import MoviesList from '../components/MoviesList';
+import List from '../components/List';
 
 const Home: React.FC = () => {
 
     return (
         <main>
             <div className="container">
-                <MoviesList />
+                <List />
             </div>
         </main>
     )

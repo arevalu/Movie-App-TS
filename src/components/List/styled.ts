@@ -1,11 +1,11 @@
 import styled from 'styled-components';
-import { theme } from '../../styles/theme/theme';
 import { mq } from '../../styles/breakpoints';
 
 export const Container = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 25px;
 
     ${ mq[1] } {
         justify-content: space-evenly;
