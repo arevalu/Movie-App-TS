@@ -17,6 +17,8 @@ jobs:
         npm install
         npm test
     - name: Build
+      env: 
+        REACT_APP_API_TMDB: ${{ secrets.REACT_APP_API_TMDB }}
       run: |
         npm install
         npm run build
