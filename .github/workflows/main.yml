@@ -12,6 +12,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
+    - name: Tests
+      run: |
+        npm test
     - name: Build
       run: |
         npm install
@@ -19,4 +22,5 @@ jobs:
     - name: Firebase Deploy
       run: |
         sudo npm install -g firebase-tools
+        firebase use movieapp-ts --token ${{ secrets.FIREBASE_TOKEN }}
         firebase deploy --token ${{ secrets.FIREBASE_TOKEN }}
