@@ -18,7 +18,7 @@ export const getPopular = async ( type: string | undefined = 'movie' ): Promise<
             id: movie.id,
             overview: movie.overview,
             poster_path: movie.poster_path,
-            title: movie.original_title,
+            title: movie.title,
             vote_average: movie.vote_average,
         }
     });
