@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../../styles/theme/theme';
 import { mq } from '../../styles/breakpoints';
 
-const { colors, font, spacing } = theme;
+const { colors, font, spacing, width } = theme;
 
 export const HeaderWrapper = styled.header`
     background-color: ${ colors.dark };
@@ -18,6 +18,14 @@ export const HeaderWrapper = styled.header`
 
     h1 {
         font-size: ${ font.size.h1 };
+    }
+
+    ${ mq[3] } {
+        .container {
+            margin-left: 2.5%;
+            max-width: ${ width.maxWidthLg };
+            width: 100%;
+        }
     }
 `;
 
@@ -47,7 +55,7 @@ export const MenuIcon = styled.div`
         width: 2rem;
     }
 
-    ${ mq[4] } {
+    ${ mq[3] } {
         display: none;
     }
 `;

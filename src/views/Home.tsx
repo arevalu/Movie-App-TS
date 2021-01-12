@@ -1,15 +1,16 @@
 import React from 'react';
 
 import List from '../components/List';
+import { HomeWrapper } from './styled';
 
 const Home: React.FC = () => {
 
     return (
-        <main>
+        <HomeWrapper>
             <div className="container">
                 <List />
             </div>
-        </main>
+        </HomeWrapper>
     )
 }
 

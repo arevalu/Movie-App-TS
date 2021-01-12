@@ -32,11 +32,11 @@ export default createGlobalStyle`
     }
   }
 
-  ${ mq[3] } {
+  /* ${ mq[3] } {
     .container {
         margin: ${ margin.mAuto };
         max-width: ${ width.maxWidthLg };
         width: 100%;
     }
-  }
+  } */
 `;

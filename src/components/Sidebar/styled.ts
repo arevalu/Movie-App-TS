@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { theme } from '../../styles/theme/theme';
+import { mq } from '../../styles/breakpoints';
 
 const { colors } = theme;
 
@@ -31,5 +32,17 @@ export const SidebarWrapper = styled.div<SidebarType>`
         cursor: pointer;
         margin-bottom: 15px;
         text-align: center;
+    }
+
+    ${ mq[4] } {
+        justify-content: flex-start;
+        padding-left: 5%; 
+        left: 0;
+        transform: translateX(0);
+        width: 250px;
+
+        div p{
+        text-align: left;
+    }
     }
 `;
