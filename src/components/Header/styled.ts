@@ -11,7 +11,10 @@ export const HeaderWrapper = styled.header`
     justify-content: space-between;
     height: 80px;
     padding: 0 ${ spacing.paddingBase };
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 150;
 
     h1 {
         font-size: ${ font.size.h1 };

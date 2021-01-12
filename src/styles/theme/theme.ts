@@ -11,6 +11,9 @@ export const theme = {
         background:     '#222B32',
         dark:           '#181C1F',
         white:          '#F5F5F5',
+        rgba: {
+            dark: '24,28,31',
+        }
     },
     font: {
         size: {

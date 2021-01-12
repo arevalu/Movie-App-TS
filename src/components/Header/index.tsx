@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { HiMenuAlt3 } from "react-icons/hi";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 import { AppContext } from '../../context/AppContext';
 import { HeaderWrapper, MenuIcon } from './styled';
@@ -22,7 +22,7 @@ const Header: React.FC = () => {
                 <h1>Movie App</h1>
             </div>
             <MenuIcon onClick={ toggleSidebar }>
-                <HiMenuAlt3 />
+                { sidebarOpen ? <HiX /> : <HiMenuAlt3 /> }
             </MenuIcon>
         </HeaderWrapper>
     )
