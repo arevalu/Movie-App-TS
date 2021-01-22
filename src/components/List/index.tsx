@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Item from '../Item';
+import MovieItem from '../MovieItem';
 import { popularMovie } from '../../types/movies';
 
 import { ListContainer, Container } from './styled';
@@ -15,7 +15,7 @@ const List = () => {
             <h2>Popular Movies</h2>
             <Container>
                 {dataMovies && dataMovies.map((movie: popularMovie) => {
-                    return <Item key={movie.id} movie={movie} />
+                    return <MovieItem key={movie.id} movie={movie} />
                 })
                 }
             </Container>

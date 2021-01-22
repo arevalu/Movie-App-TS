@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en componente <Item /> <Item /> debe renderizar correctamente 1`] = `
+exports[`Pruebas en componente <Item /> <MovieItem /> debe renderizar correctamente 1`] = `
 <styled.div>
   <styled.div>
     <span>
