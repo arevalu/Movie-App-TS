@@ -22,6 +22,7 @@ export const theme = {
             h2: '1.5rem',
             h3: '1.375rem',
             h4: '1.25rem',
+            small: '0.875rem',
         }
     },
     margin: {
@@ -29,7 +30,7 @@ export const theme = {
     },
     spacing: {
         paddingBase: '1rem',
-        large: '3.75rem',
+        large: '3rem',
     },
     width: {
         maxWidthLg: '1140px',
