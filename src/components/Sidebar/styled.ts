@@ -9,8 +9,8 @@ type SidebarType = {
 }
 
 export const SidebarWrapper = styled.div<SidebarType>`
-    background-color: ${ colors.dark };
-    box-shadow: -5px 0px 15px 0px rgba(${ colors.rgba.dark },0.5);
+    background-color: ${colors.dark};
+    box-shadow: -5px 0px 15px 0px rgba(${colors.rgba.dark},0.5);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,13 +28,7 @@ export const SidebarWrapper = styled.div<SidebarType>`
      transition: all .2s ease-in;
     }
 
-    div p{
-        cursor: pointer;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    ${ mq[4] } {
+    ${mq[4]} {
         justify-content: flex-start;
         padding-left: 5%; 
         left: 0;
