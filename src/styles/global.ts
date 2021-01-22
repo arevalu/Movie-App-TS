@@ -1,8 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
 import { mq } from './breakpoints';
-import { theme } from './theme/theme';
-
-const { margin, width } = theme;
 
 export default createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
@@ -14,8 +11,8 @@ export default createGlobalStyle`
   }
 
   body {
-    background-color: ${ props => props.theme.colors.background };
-    color: ${ props => props.theme.colors.white };
+    background-color: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.white};
     font-family: 'Poppins', sans-serif;
   }
 
@@ -27,16 +24,8 @@ export default createGlobalStyle`
     margin-bottom: 20px;
     text-align: center;
 
-    ${ mq[3] } {
+    ${mq[3]} {
       text-align: left;
     }
   }
-
-  /* ${ mq[3] } {
-    .container {
-        margin: ${ margin.mAuto };
-        max-width: ${ width.maxWidthLg };
-        width: 100%;
-    }
-  } */
 `;

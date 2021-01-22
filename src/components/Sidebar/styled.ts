@@ -14,9 +14,9 @@ export const SidebarWrapper = styled.div<SidebarType>`
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 50px);
     position: fixed;
-    top: 80px;
+    top: 50px;
     right: 0;
     transform: translateX(100%);
     transition: all .2s ease-out;

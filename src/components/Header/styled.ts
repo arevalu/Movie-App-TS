@@ -5,25 +5,26 @@ import { mq } from '../../styles/breakpoints';
 const { colors, font, spacing, width } = theme;
 
 export const HeaderWrapper = styled.header`
-    background-color: ${ colors.dark };
+    background-color: ${colors.dark};
+    border-bottom: 2px solid ${colors.primary};
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
-    padding: 0 ${ spacing.paddingBase };
+    height: 60px;
+    padding: 0 ${spacing.paddingBase};
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 150;
 
     h1 {
-        font-size: ${ font.size.h1 };
+        font-size: ${font.size.h1};
     }
 
-    ${ mq[3] } {
+    ${mq[3]} {
         .container {
             margin-left: 2.5%;
-            max-width: ${ width.maxWidthLg };
+            max-width: ${width.maxWidthLg};
             width: 100%;
         }
     }
@@ -41,12 +42,12 @@ export const MenuIcon = styled.div`
     width: 3rem;
 
     &:hover {
-        background-color: ${ colors.primary };
+        background-color: ${colors.primary};
         transition: all .1s ease-out;
     }
 
     &:active {
-        background-color: ${ colors.dark };
+        background-color: ${colors.dark};
         transition: all .1s ease-out;
     }
 
@@ -55,7 +56,7 @@ export const MenuIcon = styled.div`
         width: 2rem;
     }
 
-    ${ mq[3] } {
+    ${mq[3]} {
         display: none;
     }
 `;
