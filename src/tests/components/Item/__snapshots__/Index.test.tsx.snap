@@ -1,19 +1,108 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Pruebas en componente <Item /> <Item /> debe renderizar correctamente 1`] = `
-<styled.div>
-  <styled.div>
-    <span>
-      7.2
-    </span>
-  </styled.div>
-  <styled.div
-    imgSource="https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg"
-  />
-  <styled.div>
-    <p>
-      Wonder Woman 1984
-    </p>
-  </styled.div>
-</styled.div>
+.c0 {
+  cursor: pointer;
+  margin-bottom: 3.75rem;
+  position: relative;
+  width: 80%;
+}
+
+.c1 {
+  background-color: #ffc107;
+  border-radius: 0.25rem;
+  color: #181C1F;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 25px;
+  position: absolute;
+  top: 15px;
+  right: 5%;
+  width: 50px;
+}
+
+.c2 {
+  background-image: url( "https://image.tmdb.org/t/p/original/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 1.125rem;
+  padding-bottom: 150%;
+  width: 100%;
+}
+
+.c3 {
+  margin-top: 1.25rem;
+}
+
+.c3 p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  padding-left: 10px;
+}
+
+@media (min-width:480px) {
+  .c0 {
+    width: 40%;
+  }
+}
+
+@media (min-width:768px) {
+  .c0 {
+    width: 30%;
+  }
+}
+
+@media (min-width:960px) {
+  .c0 {
+    width: 200px;
+  }
+}
+
+@media (min-width:960px) {
+  .c2 {
+    border-radius: 0.75rem;
+  }
+}
+
+@media (min-width:960px) {
+  .c3 p {
+    font-size: 1rem;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      <span>
+        7.2
+      </span>
+    </div>
+    <div
+      class="c2"
+      role="img"
+    />
+    <div
+      class="c3"
+    >
+      <p>
+        Wonder Woman 1984
+      </p>
+    </div>
+  </div>
+</div>
 `;

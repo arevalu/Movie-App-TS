@@ -21,12 +21,8 @@ const App: React.FC = () => {
           <Header />
           <Sidebar />
           <Routes>
-            <Route path="/">
-              <Home />
-            </Route>
-            <Route path="/movie/:movieId">
-              <MovieDetail />
-            </Route>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:movieId" element={<MovieDetail />} />
           </Routes>
         </Router>
       </AppProvider>
