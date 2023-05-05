@@ -4,7 +4,7 @@ import { mq } from '../../styles/breakpoints';
 
 const { colors, borderRadius, font, spacing } = theme;
 
-type Card = {
+type CardProps = {
     imgSource: string;
 }
 
@@ -41,7 +41,7 @@ export const VoteAverage = styled.div`
     width: 50px;
 `
 
-export const CardMedia = styled.div<Card>`
+export const CardMedia = styled.div<CardProps>`
     background-image: url( "${ ({imgSource}) => imgSource}" );
     background-repeat: no-repeat;
     background-size: cover;
