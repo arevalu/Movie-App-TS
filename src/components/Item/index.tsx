@@ -18,7 +18,8 @@ const MovieItem: React.FC<ItemProps> = ({ movie }) => {
             <VoteAverage>
                 <span>{ vote_average }</span>
             </VoteAverage>
-            <CardMedia 
+            <CardMedia
+                role="img"
                 imgSource={ `${ URL_IMAGE_POSTER }${ poster_path }` }
             />
             <CardTitle>
