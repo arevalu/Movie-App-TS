@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
 import { AppProvider } from './context/AppContext';
@@ -20,14 +20,14 @@ const App: React.FC = () => {
           <GlobalStyle />
           <Header />
           <Sidebar />
-          <Switch>
-            <Route exact path="/">
+          <Routes>
+            <Route path="/">
               <Home />
             </Route>
-            <Route exact path="/movie/:movieId">
+            <Route path="/movie/:movieId">
               <MovieDetail />
             </Route>
-          </Switch>
+          </Routes>
         </Router>
       </AppProvider>
     </ThemeProvider>
