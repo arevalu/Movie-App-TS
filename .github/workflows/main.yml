@@ -11,17 +11,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v3
     - name: Tests
       run: |
-        npm install
-        npm test
+        yarn install
+        yarn test
+    - name: Audit
+      run: |
+        yarn install
+        yarn audit
     - name: Build
       env: 
         REACT_APP_API_TMDB: ${{ secrets.REACT_APP_API_TMDB }}
       run: |
-        npm install
-        npm run build
+        yarn install
+        yarn build
     - name: Firebase Deploy
       run: |
         sudo npm install -g firebase-tools

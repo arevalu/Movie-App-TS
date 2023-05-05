@@ -17,11 +17,11 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react"
+    "jsx": "react",
+    "types": ["jest"]
   },
-  "include": [
-    "src"
-  ],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/"],
   "files": [
     "src/styles/styled.d.ts"
   ]

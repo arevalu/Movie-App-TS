@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { render } from '@testing-library/react';
 
 import MovieItem from '../../../components/MovieItem/index';
 import { CardMedia } from '../../../components/MovieItem/styled';
@@ -15,28 +15,38 @@ describe('Pruebas en componente <Item />', () => {
         title: "Wonder Woman 1984",
         vote_average: 7.2
     }
+    
+    test('<Item /> debe renderizar correctamente', () => {
+        const { container } = render( <MovieItem movie={ movie } /> );
 
-    const wrapper = shallow(<MovieItem movie={movie} />);
-
-    test('<MovieItem /> debe renderizar correctamente', () => {
-        expect(wrapper).toMatchSnapshot();
+        expect(container).toMatchSnapshot();
     });
 
     test('Title debe renderizar en tag <p>', () => {
-        const p = wrapper.find("p").text();
-        expect(p).toBe(movie.title);
-    });
+        const { getByText } = render( <MovieItem movie={ movie } /> );
 
+        const movieTitle = getByText(movie.title);
+
+        expect( movieTitle ).toBeDefined();
+        expect( movieTitle.tagName.toLowerCase() ).toBe('p');
+    });
+    
     test('Vote_average debe renderizar en tag <span>', () => {
-        const voteAverage = wrapper.find("span").text();
-        expect(Number(voteAverage)).toBe(movie.vote_average);
+        const { getByText } = render( <MovieItem movie={ movie } /> );
+
+        const voteAverage = getByText(movie.vote_average);
+
+        expect( voteAverage ).toBeDefined();
+        expect( voteAverage.tagName.toLowerCase() ).toBe('span');
     });
-
+    
     test('La prop imgSource de CardMedia debe ser imageUrlBase + poster_path', () => {
-        const imageUrlBase = 'https://image.tmdb.org/t/p/original';
-        const CardMedia_styled = wrapper.find(CardMedia).props();
+        const { getByRole } = render( <MovieItem movie={ movie } /> );
 
-        expect(CardMedia_styled.imgSource).toBe(`${imageUrlBase}${movie.poster_path}`);
+        const imageUrlBase = new RegExp('https://image.tmdb.org/t/p/original');
+        const CardMedia_styled = getByRole( 'img' );
+
+        expect( CardMedia_styled ).toHaveStyleRule('background-image', imageUrlBase);
     });
 
 });
